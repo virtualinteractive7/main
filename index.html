@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Documents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li>Dashboard</li>
+            <li>My Pay Slips</li>
+            <li>Attendance</li>
+            <li>Tax Deductions</li>
+            <li>Reimbursements</li>
+            <li class="active">Documents</li>
+            <li>Help</li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Documents</h1>
+        <form id="document-upload-form">
+            <label for="document-type">Upload new documents (* is mandatory)</label>
+            <select id="document-type" required>
+                <option value="" disabled selected>Please pick a type</option>
+                <!-- Add document types here -->
+            </select>
+
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Description?"></textarea>
+
+            <label for="file-upload">Images or documents (maximum 5 MB each) *</label>
+            <input type="file" id="file-upload" multiple accept=".png, .jpg, .pdf" required>
+
+            <button type="submit">Upload Document(s)</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
